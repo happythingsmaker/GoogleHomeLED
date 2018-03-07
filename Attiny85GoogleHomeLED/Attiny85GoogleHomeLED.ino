@@ -10,7 +10,6 @@
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_PIXELS, NEO_PIN, NEO_GRB + NEO_KHZ800);
 
 Queue<int16_t> queue(40);
-Queue<int16_t> stdQueue(40);
 
 uint16_t wheelSpeedCount = 0;
 uint32_t colorCount = 0;
@@ -26,7 +25,7 @@ void setup() {
 
 void rotateColor() {
 // this is rainbow circle
-	colorCount += 1;
+	colorCount += 2;
 	for (uint8_t i = 0; i < NUM_PIXELS; i++) {
 		uint32_t tempColor = Wheel(((i * 256 / NUM_PIXELS) + colorCount) & 255);
 		strip.setPixelColor(i, tempColor);
@@ -93,7 +92,6 @@ void taskUnit() {
 
 	int16_t micAnalogValue = analogRead(PIN_MIC_ANALOG);
 	queue.push(abs(micAnalogValue - 512));
-	stdQueue.push(queue.average());
 
 	// once every 10 times
 	if (wheelSpeedCount++ > 10) {
