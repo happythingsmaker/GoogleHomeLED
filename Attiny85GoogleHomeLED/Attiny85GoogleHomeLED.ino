@@ -139,7 +139,7 @@ void taskUnit() {
   
   
 
-  if (stateCheckCount ++ > 100 ) {
+  if (stateCheckCount ++ > 500 ) {
     stateCheckCount = 0;
 
     if (stdQueue.average() > 10) {
