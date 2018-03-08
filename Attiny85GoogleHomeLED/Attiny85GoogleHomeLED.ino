@@ -1,4 +1,34 @@
-// MAX4466 Microphone
+/*
+[ Instruction ]
+Youtube  https://youtu.be/916wISFzH1I
+Manual  https://sites.google.com/view/100happythings/17-google-home-led
+Source Code https://github.com/happythingsmaker/GoogleHomeLED
+3D printing files https://www.thingiverse.com/thing:2817612
+
+[ About the maker ]
+Instagram https://www.instagram.com/happythingsmaker/
+Facebook https://www.facebook.com/happyThingsMaker/
+Blog http://happyThingsMaker.com
+
+[ Parts ]
+1 x Digispark ATtiny85 board http://ebay.to/2tpu1RM
+1 x MIC Sensor (MAX4466) http://ebay.to/2tsr5DZ
+1 x 3pin header set http://ebay.to/2tuDU0w
+1 x ff dupont cable set  http://ebay.to/2oJnNaL
+1 x LED Ring(neopixel)  http://ebay.to/2ofqKiZ
+1 x Capacitor (10v 2200uF) http://ebay.to/2txbxPu
+
+[Tools ]
+3d printer (Anet A8) http://ebay.to/2tfkmNN
+Filament for 3d print (PLA 1.75mm) http://ebay.to/2sIp6v7
+Wire Nipper http://ebay.to/2FilO4a
+Wire Stipper http://ebay.to/2oeJajI
+Hot melt glue gun http://ebay.to/2sKDKSs
+Screw Driver (+) http://ebay.to/2CAyIaX
+Electronic Tape http://ebay.to/2EK0wQ8
+Soldering Tools(Hakko)  http://ebay.to/2tlFrGq
+Soldering Hand http://ebay.to/2ETtQn9
+*/
 
 #include <Adafruit_NeoPixel.h>
 #include "Queue.h"
@@ -121,9 +151,6 @@ void loop() {
 		strip.show();
 	}
 }
-
-
-
 
 // All about NEOPIXEL ===========================================================================//
 uint32_t Wheel(byte WheelPos) {
